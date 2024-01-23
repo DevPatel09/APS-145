@@ -1,0 +1,100 @@
+Workshop 7 Group 4
+
+Done By:
+MEMBER 2 : Dev Kshitij Patel
+Student ID: 142979228
+MEMBER 3: Meet Vimalkumar Patel
+Student ID: 144113222          
+        
+Pseudocode:
+Logic1:
+Process: Calculate Regular Customer  
+Step 1. Start
+Step 2.Pass empty car_wash to process
+Step 3. Display a greeting message.
+Step 4. Display a message requesting the consumer to choose a wash option.
+Step 5. Display the available wash options shown below, 
+                  Car Wash Options: 
+                         i) Basic- $ 5.50
+                        ii) Clean- $ 8.75
+                       iii) Super Clean- $12.50
+Step 6. Retrieve the selected option from the customer.
+Step 7.Check if the selected option is valid:
+                 If it is valid, then proceed to the next step.
+                 Else display a message asking the customer to try again.
+Step 8.Retrieve the price for the selected option.
+Step 9.Show a prompt requesting the customer to insert their credit card.
+Step 10.The customer's credit card information is read and retrieved.
+Step 11.Check if the credit card information is valid:
+                   a) If the information is valid, proceed to the next step.
+                   b) Else display a message asking the customer to try again.
+Step 12.Apply the credit card and the amount to the transaction.
+Step 13.Check the transaction status to determine if the payment was successful:
+                   a) If the transaction status is "successfull", then generate a receipt with the selected option and the amount.
+                       Display a thank you message to the customer.
+                       And start the car wash process.
+                   b) Else display a message informing the customer to try again
+Step 14.Update car_wash process
+Step 15.End
+
+Logic 2:
+Process: Calculate Monthly Member (cal_monthly_member)
+Step 1.Start
+Step 2: Pass car_wash to process
+Step 3.Prompt customer did he/she had taken monthly membership earlier?
+  a)yes (Go to step 6)
+  b)no  
+Step 4.Prompt user to take one of the default Car Wash Options that they want to sign-up for:
+  a)Basic               : $5.50
+  b)Clean              : $8.75
+  c)Super Clean : $12.50
+Step 5:The customer have to pay prepaid membership charges.
+Step 6:Members' windshield will have stick-on barcode chips attached.
+Step 7:Display Welcome message.
+Step 8:Display a message to the member telling them to go to the kiosk station for automatic scanning.
+Step 9:Customer's car will enter near kiosk station.
+Step 10: Scan the barcode chip of the car.
+Step 11: If a barcode chip is successfully detected and read:
+                  then membership contact details will be identified and displayed on the screen.
+             Else, display a message indicating that the vehicle is not a monthly member.
+Step 12: Then display Thankyou message to the customer.
+Step 13: Update car_wash process.
+Step 14: End
+
+Logic 3:
+Process: Calculate Exceed Limit in Car wash (cal_exceed_limit)
+Step 1: Start
+Step 2: pass car_wash to process.
+Step 3. Check if the customer is a monthly member 
+     a. No, display an error message and prompt the customer to pay for the selected wash option.
+     b. Yes, continue to the next step.
+Step 4. Check if the member has already exceeded their two-wash limit for the day:
+     a. If yes, display an error message 
+        then: prompt the member to pay regular rates for any additional washes.
+     b. If no, continue to the next step.
+Step 5. Display the member's prepaid wash option.
+Step 6. Ask the member if they want to choose a different wash option:
+     a. yes, prompt the member to select the wished wash option 
+        then: calculate the regular rate for the selected option.
+     b. If no, skip to the next step.
+Step 7. Display the total amount for the selected wash option 
+Step 8. Process the payment 
+Step 9. Print a receipt for the transaction.
+Step 10. Update car_wash process.
+Step 11. End
+
+
+Main Process:
+Step 1: Start
+Step 2: If barcode is successfully scanned and detected:
+       then: a) If customer is regular customer:
+                   then: - Call Regular Customer process: (cal_regular_customer) [Logic 1]
+                  b) else if , customer is monthly member:
+                  then: - if, number of washes exceeds 2:
+                                        then:- Call Exceed Limit in Car wash (cal_exceed_limit) [Logic 3]
+                               else, 
+                                       then:- Call Monthly Customer process: (cal_monthly_customer) [Logic 2]
+                c) else,
+                      then: Display "Invalid barcode"
+Step  : End
+                 

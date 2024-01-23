@@ -1,0 +1,113 @@
+/*/////////////////////////////////////////////////////////////////////
+                            Workshop - #5 
+Full Name  : Dev Kshitij Patel
+Student ID#: 142979228
+Email      : dkpatel59@myseneca.ca
+Section    : ZGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+Group- 4, Member-2   ( Logic 2)
+
+cost_structure
+total ticket charge
+age_interval
+num_of_children
+num_of_adult
+num_of_senior
+cover_charge
+ticket_price
+time
+musical_ticket
+theatre_ticket
+num_of_people
+
+Process: calculate Cover Charge (cal_cover_charge)
+1.Start
+2.Pass empty cost_stucture to process
+3.Determine System total ticket charge
+4.Set cost_structure-> total ticket charge = System total ticket charge
+5.Prompt user to enter no. of children, no. of adults, no. of seniors
+6.Store value to cost_structure-> num_of_children, pass_structure-> num_of_adult, pass_structure-> num_of_senior
+7. cost_structure-> cover_charge =(cost_structure-> num_of_children*0.75)
+    cost_structure-> cover_charge =(cost_structure-> num_of_adult*4.00)
+    cost_structure-> cover_charge =(cost_structure-> num_of_senior*1.50)
+8. Output updated cost_structure
+9.Stop
+
+*Testing for process: Cover charge*
+Prompt user to enter no. of children, no. of adults, no. of seniors
+lets take: num_of_senior = 3, num_of_adult = 1, num_of_children = 2
+cover charge for seniors(3 senior) = 3 * $1.50 = $4.50
+cover charge for adults(1 adult)= 1 * $4.00 = $4.00
+cover charge for children(2 children) = 2 * $0.75 = $1.50
+
+Here, num_of_adult = 1 , num_of_senior = 0, num_of_children = 0
+then,
+cover charge for seniors(0 senior) = 0 * $1.50 = $0.00
+cover charge for adults(1 adult)= 1 * $4.00 = $4.00
+cover charge for children(0 children) = 0* $0.75 = $0.00
+Therefore, the sum of cover charge will be  $4.00
+ 
+
+Process: calculate Ticket Charge (cal_ticket_price)
+1.Start
+2.Pass cost_structure to process
+3.Prompt user to enter to chose between musical ticket cost and theatre ticket cost
+4.Store value to cost_structure-> musical_ticket or pass_structure->theatre_ticket
+5. if (cost_structure-> musical ticket)
+         a) if (cost_structure->time = (12pm - 4pm))
+             i) cost_structure-> musical_ticket = (cost_structure-> num_of_people*70.00)
+         b) else if (cost_structure->time = (6pm - 9pm))
+            i) cost_structure-> musical_ticket = (cost_structure-> num_of_people*150.00)
+
+   else if (cost_structure-> theatre ticket)
+        a) if (cost_structure->time = (12pm - 4pm))
+             i) cost_structure-> theatre_ticket = (cost_structure-> num_of_people*55.00)
+       b) else if (cost_structure->time = (6pm - 9pm))
+            i) cost_structure-> theatre_ticket = (cost_structure-> num_of_people*115.00)
+6. Output updated cost_structure
+7. Stop
+
+*Question Answer*
+Answer 1) num_of_senior =1, num_of_adults = 2, num_of_children = 1
+Here, user chooses musical ticket.
+Therefore, it was further asked to enter the timing (morning or evening)
+The user chooses the time 8pm (evening)
+num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+Therefore, 
+cost_structure-> musical_ticket = (cost_structure-> num_of_people*150.00)
+here, musical_ticket = (4 * 150.00) = $600.00
+
+Answer 2)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+Here, user chooses musical ticket.
+Therefore, it was further asked to enter the timing (morning or evening)
+The user chooses the time 3pm (morning)
+num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+Therefore, 
+cost_structure-> musical_ticket = (cost_structure-> num_of_people*70.00)
+here, musical_ticket = (4 * 70.00) = $280.00
+
+Answer 3)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+Here, user chooses theatre ticket.
+Therefore, it was further asked to enter the timing (morning or evening)
+The user chooses the time 8pm (evening)
+num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+Therefore, 
+cost_structure-> theatre_ticket = (cost_structure-> num_of_people*115.00)
+here, musical_ticket = (4 * 115.00) = $460.00
+
+Answer 4)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+Here, user chooses theatre ticket.
+Therefore, it was further asked to enter the timing (morning or evening)
+The user chooses the time 2pm (morning)
+num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+Therefore, 
+cost_structure-> theatre_ticket = (cost_structure-> num_of_people*150.00)
+here, musical_ticket = (4 * 55.00) = $220.00
+
+
+

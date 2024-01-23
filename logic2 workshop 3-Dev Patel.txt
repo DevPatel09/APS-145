@@ -1,0 +1,67 @@
+Name: Dev Kshitij Patel
+Student ID: 142979228
+Student Email ID: dkpatel59@myseneca.ca
+APS145 Workshop-3, logic 2
+
+pseudocode:
+1)Start
+
+2)Declartion of variables: early_state(Possible output = RED, AMBER, GREEN) , 
+                                                 present_state(Possible output = RED, AMBER, GREEN),
+                                                  
+3)Set the initial time: start_time = (now
+                                          current_time = 0,
+                                          time_difference = current_time - start_time,
+
+4)Capture the current time: start_time = (now)
+                                                      current_time = (now),
+                                                      time_difference = 0,
+5)If early_state = RED,
+        Then a) Present state will be AMBER.
+                       present_state = AMBER
+                  b) Set current time
+                      current_time = (now)
+                 c) time_difference = 10 sec
+                                           Then GREEN light will be displayed
+                                           set early_state = AMBER
+                                           set present_state = GREEN
+
+   else if early_state = AMBER,
+          Then a) Present state will be GREEN.
+                          present_state = GREEN
+                     b) Set current time
+                          current_time = (now)
+                    c) time_difference = 40 sec
+                                         Then RED light will be displayed
+                                        set early_state = GREEN
+                                        set present_state = RED
+
+   else early_state = GREEN
+         Then a) Present state will be RED.
+                         present_state = RED
+                    b) Set current time
+                         current_time = (now)
+                    c) time_difference = 70 sec
+                                         Then AMBER light will be displayed
+                                        set early_state = RED
+                                        set present_state = AMBER
+
+6)END
+                                        
+                                                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

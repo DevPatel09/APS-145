@@ -1,0 +1,161 @@
+Name      : Dev Kshitij Patel (MEMBER 2)
+Name      : Meet Vimalkumar Patel (MEMBER 3)
+
+WORKSHOP 9 GROUP 4
+
+//Logic 1
+Step 1: Start
+Step 2: Declaration and initializing variables:
+        - Total_Time_In_RoomA = 0
+        - Num_Of_Games = 0
+        - RoomA_ExploreTime = 0
+        - RoomB_ExploreTime = 0
+
+Step 3: Call the black box process [RandomBinary], which determines who starts the first game:
+        - If the result is 1, 
+              then Player-1 starts (human player).
+        - Else,
+              then Player-2 starts (computer).
+
+Step 4: Prompt the human player (Player-1) to select their unique identifier symbol ("X" or "O") to use.
+
+Step 5: Loop until three games have been played:
+        a. Increment Num_Of_Games by 1.
+        b. If Num_Of_Games is 1, determine the starting player based on the result from step 3.
+        c. If Num_Of_Games is greater than 1, the starting player is the one who won the previous game.
+
+Step 6: Start the game:
+        a. Call the black box process [ClearBoard] to clear the board before each new game.
+        b. Loop until the game is over (either a player wins or it's a tie):
+           i) Let the starting player (Player-n) make their move using the black box process [MakeMove(Player-n)].
+           ii) Display the game board.
+           iii) Check if there's a winner or a tie using the black box process [CheckWinner].
+           iv) If the game is over, exit the loop.
+
+Step 7: Calculate the time taken to play the game:
+        a. Determine the total number of moves that both players have made (named as TotalMoves).
+        b. Calculate the total time spent playing the game (Tot_Time_Game) by multiplying TotalMoves by 4 minutes.
+        c. If the game is tied, add 8 minutes to Tot_Time_Game.
+        d. If the human player (Player-1) loses, add 15 minutes to Tot_Time_Game.
+
+Step 8: Add Tot_Time_Game to RoomA_ExploreTime 
+
+Step 9: If Num_Of_Games < 3, Go to step 5
+
+Step 10: Calculate the average time per game (Avg_Time_Per_Game) by dividing RoomA_ExploreTime by 3 (number of games played).
+
+Step 11: Calculate the longest time spent in a single game (Longest_Time_Game) based on the three game times recorded.
+
+Step 12: Calculate the pessimistic risk factor estimate for the next game (Pessimistic_Risk_Factor) by adding Avg_Time_Per_Game to Longest_Time_Game.
+
+Step 13: Calculate the remaining time for exploration (Time_Left) by subtracting RoomA_ExploreTime from the flashlight's initial 4.5 hours.
+
+Step 14: Determine if there is enough time for further exploration in Room A:
+    a. If Time_Left is greater than or equal to Pessimistic_Risk_Factor, it's safe to explore further in Room A.
+    b. If Time_Left is less than Pessimistic_Risk_Factor, it's time to turn around and head back to safety.
+
+Step 15: If there is enough time to explore further:
+    a. Call the Room B logic (Logic 3) to explore Room B and get the time spent (RoomB_ExploreTime).
+    b. Add RoomB_ExploreTime to RoomA_ExploreTime (to get the total exploration time for both rooms).
+
+Step 16: If there is not enough time to explore further, return to the starting point.
+
+Step 17: Display the time analysis summary to inform the user when to turn around before the flashlight runs out of power.
+
+
+
+//logic for Room A which will return the time it took to explore Room A.
+
+
+Step 18:Declaration and initializing variable:
+        -> Total_Time_In_RoomA = 0
+        -> Num_Of_Games = 0
+Step 19: Call the black box process [RandomBinary], which determine who starts the first game:
+        -> If the result is 1, 
+              then Player-1 starts (human player).
+        -> Else,
+              then Player-2 starts (computer).
+
+Step 20: Prompt the human player (Player-1) to select their unique identifier symbol ("X" or "O") to use.
+
+Step 21: Loop until three games have been played:
+        a. Increment Num_Of_Games by 1.
+        b. If Num_Of_Games is 1, determine the starting player based on the result from step 2.
+        c. If Num_Of_Games is greater than 1, the starting player is the one who won the previous game.
+
+Step 22: Start the game:
+        a. Call the black box process [ClearBoard] to clear the board before each new game.
+        b. Loop until the game is over (either a player wins or it's a tie):
+           i) Let the starting player (Player-n) make their move using the black box process [MakeMove(Player-n)].
+           ii) Display the game board.
+           iii) Check if there's a winner or a tie using the black box process [CheckWinner].
+           iv) If the game is over, exit the loop.
+
+Step 23: Calculate the time taken to play the game:
+        a. Determine the total number of moves that both players have made (named as TotalMoves).
+        b. Calculate the total time spent playing the game (Tot_Time_Game) by multiplying TotalMoves by 4 minutes.
+        c. If the game is tied, add 8 minutes to totalTimeInGame.
+        d. If the human player (Player-1) loses, add 15 minutes to Tot_Time_Game.
+
+Step 24. Add Tot_Time_Game to Total_Time_In_RoomA 
+
+Step 25. Calculate the average time per game Avg_Time_Per_Game) by dividing Total_Time_In_RoomA by 3 (number of games played).
+
+Step 26. Calculate the longest time spent in a single game (Longest_Time_Game) based on the three game times recorded.
+
+Step 27. Calculate the pessimistic risk factor estimate for the next game (Pessimistic_Risk_Factor) by adding Avg_Time_Per_Game to Longest_Time_Game.
+
+Step 28. Calculate the remaining time for exploration (Time_Left) by subtracting Total_Time_In_RoomA from the flashlight's initial 4.5 hours.
+
+Step 29. Determine if there is enough time for further exploration in Room A:
+    a. If Time_Left is greater than or equal to Pessimistic_Risk_Factor, it's safe to explore further in Room A.
+    b. If Time_Left is less than Pessimistic_Risk_Factor, it's time to turn around and head back to safety.
+
+
+//logic for Room B which will return the time it took to explore Room B
+.
+ PlayerInfo
+    
+Guessinput         
+exploreTime        
+gameHistory        
+bst_ThreeWins      
+
+ Gameinfo 
+letterGuess 
+secretWord  
+
+turn        
+no_Games   
+RandomWord
+
+Step 30: Start
+Step 31: Set Playerinfo empty
+Step 32: Set letterGuess to 10
+Step 33: Call any RandomWord
+Step 34: Store value to Gameinfo->secretWord
+Step 35: Display secretWord with empty spaces 
+Step 36: Prompt user input a letter to guess the words
+Step 37: store value as Guessinput
+Step 38: For each character in secretWord
+              if Guessinput matches any secretWord
+		then  Update Playerinfo->exploreTime (exploreTime + 2 minutes)	
+		 or else Update Playerinfo->exploreTime (exploreTime + 3 minutes)
+Step 39: Do you want to attempt solving the guess?
+		if Yes the Go to step (11)
+		 if not then Go to step (13)
+Step 40: Call Solve
+Step 41: is the return value of Solve = 1 ?
+		if Yes then Update Playerinfo->exploreTime (exploreTime + 4 minutes)
+			 Pass win to Playerinfo->gameHistory
+			 Go to step (14)
+		 if not then Update Playerinfo->exploreTime (exploreTime + 15 minutes)
+			 Go to step (13)
+Step 42: is Guessinput < letterGuess ?
+		if Yes then Go to step (6)
+		 if not then Update Playerinfo->exploreTime (exploreTime + 15 minute)
+			 Pass Lose to Playerinfo->gameHistory
+			 Go to step (14)
+Step 43: return total accumulated time which is total accumulated time = Playerinfo->exploreTime
+Step 44: End
+ 

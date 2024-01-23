@@ -1,0 +1,24 @@
+Pseudo Code: Workshop 1 - Group Project 
+
+Step 1:  Start
+Step 2:  Setup the basketball court & bring the balls.
+Step 3:  A basketball shootout challenge was conducted between two players.
+Step 4:  They decided to roll a simulated die.
+Step 5: It determined which one of them will proceed for the first shootout.
+Step 6:  The player 1 rolled and recorded his number on the dice.
+Step 7: Dice was rolled by player 2 and the number was noted.
+Step 8:  a)If there is a tie (Go to  Step 6).
+                b) If there is no tie.
+Step 9: They both agreed to have 4 basketball throw attempts each.
+Step 10: The player with the highest number on dice will go first.
+Step 11:Successful baskets of first player were recorded.
+Step 12: Then, the second player went & recorded his shootout.  
+Step 13: a)If the number of successful baskets of player 1 = player 2. (Go to Step 11)
+               b)If the number of successful baskets of player 1> player 2  OR player 2 > player 1.
+Step 14: The player with the most successfull baskets will be declared the winner.
+Step 15: The losing player will owe money to the winner.
+Step 16: If there was not a tie, money will be given as per step 18.
+Step 17: If at any point in the game, there was a tie (Go to Step 19).
+Step 18: The money to be given: (Number of baskets made by winner - Number of baskets made by losing player)
+Step 19: The amount of money to be given: (Number of baskets made by winner - Number of baskets made by losing player - 50 Cents * {Number of tied games})
+Step 20: End  

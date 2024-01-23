@@ -1,0 +1,53 @@
+Name: Dev Kshitij Patel
+Student ID: 142979228
+Student Email ID: dkpatel59@myseneca.ca
+Section: ZGG
+
+APS 145 Pseudocode Workshop 9 Logic 2:
+
+Step 1: Start
+Step 2: Declaration and initializing variable:
+        -> Total_Time_In_RoomA = 0
+        -> Num_Of_Games = 0
+Step 3: Call the black box process [RandomBinary], which determine who starts the first game:
+        -> If the result is 1, 
+              then Player-1 starts (human player).
+        -> Else,
+              then Player-2 starts (computer).
+
+Step 4: Prompt the human player (Player-1) to select their unique identifier symbol ("X" or "O") to use.
+
+Step 5: Loop until three games have been played:
+        a. Increment Num_Of_Games by 1.
+        b. If Num_Of_Games is 1, determine the starting player based on the result from step 2.
+        c. If Num_Of_Games is greater than 1, the starting player is the one who won the previous game.
+
+Step 6: Start the game:
+        a. Call the black box process [ClearBoard] to clear the board before each new game.
+        b. Loop until the game is over (either a player wins or it's a tie):
+           i) Let the starting player (Player-n) make their move using the black box process [MakeMove(Player-n)].
+           ii) Display the game board.
+           iii) Check if there's a winner or a tie using the black box process [CheckWinner].
+           iv) If the game is over, exit the loop.
+
+Step 7: Calculate the time taken to play the game:
+        a. Determine the total number of moves that both players have made (named as TotalMoves).
+        b. Calculate the total time spent playing the game (Tot_Time_Game) by multiplying TotalMoves by 4 minutes.
+        c. If the game is tied, add 8 minutes to totalTimeInGame.
+        d. If the human player (Player-1) loses, add 15 minutes to Tot_Time_Game.
+
+   7. Add Tot_Time_Game to Total_Time_In_RoomA 
+
+Step 8. Calculate the average time per game Avg_Time_Per_Game) by dividing Total_Time_In_RoomA by 3 (number of games played).
+
+Step 9. Calculate the longest time spent in a single game (Longest_Time_Game) based on the three game times recorded.
+
+Step 10. Calculate the pessimistic risk factor estimate for the next game (Pessimistic_Risk_Factor) by adding Avg_Time_Per_Game to Longest_Time_Game.
+
+Step 11. Calculate the remaining time for exploration (Time_Left) by subtracting Total_Time_In_RoomA from the flashlight's initial 4.5 hours.
+
+Step 12. Determine if there is enough time for further exploration in Room A:
+    a. If Time_Left is greater than or equal to Pessimistic_Risk_Factor, it's safe to explore further in Room A.
+    b. If Time_Left is less than Pessimistic_Risk_Factor, it's time to turn around and head back to safety.
+
+Step 13: End

@@ -1,0 +1,289 @@
+MEMBER 1 : Divya Patel
+Student ID: 103491239
+MEMBER 2 : Dev Kshitij Patel
+Student ID: 142979228
+MEMBER 3: Meet Vimalkumar Patel
+Student ID: 144113222
+Group Project , Workshop 5
+APS 145 , Section ZGG.
+
+
+cost_structure
+total ticket charge
+age_interval
+num_of_children
+num_of_adult
+num_of_senior
+cover_charge
+ticket_price
+time
+musical_ticket
+theatre_ticket
+num_of_people
+
+Part-1 (Cover Charges)
+Process: calculate Cover Charge (cal_cover_charge)
+1.Start
+2.Pass empty cost_stucture to process
+3.Determine System total ticket charge
+4.Set cost_structure-> total ticket charge = System total ticket charge
+5.Prompt user to enter no. of children, no. of adults, no. of seniors
+6.Store value to cost_structure-> num_of_children, pass_structure-> num_of_adult, pass_structure-> num_of_senior
+7. cost_structure-> cover_charge =(cost_structure-> num_of_children*0.75)
+    cost_structure-> cover_charge =(cost_structure-> num_of_adult*4.00)
+    cost_structure-> cover_charge =(cost_structure-> num_of_senior*1.50)
+8. Output updated cost_structure
+9.Stop
+
+  
+     *Testing for process: Cover charge*
+      Prompt user to enter no. of children, no. of adults, no. of seniors
+      lets take: num_of_senior = 3, num_of_adult = 1, num_of_children = 2
+      cover charge for seniors(3 senior) = 3 * $1.50 = $4.50
+      cover charge for adults(1 adult)= 1 * $4.00 = $4.00
+      cover charge for children(2 children) = 2 * $0.75 = $1.50
+
+      Here, num_of_adult = 1 , num_of_senior = 0, num_of_children = 0
+     then,
+     cover charge for seniors(0 senior) = 0 * $1.50 = $0.00
+     cover charge for adults(1 adult)= 1 * $4.00 = $4.00
+     cover charge for children(0 children) = 0* $0.75 = $0.00
+     Therefore, the sum of cover charge will be  $4.00
+ 
+Part-2 (Ticket Charges)
+Process: calculate Ticket Charge (cal_ticket_price)
+1.Start
+2.Pass cost_structure to process
+3.Prompt user to enter to chose between musical ticket cost and theatre ticket cost
+4.Store value to cost_structure-> musical_ticket or pass_structure->theatre_ticket
+5. if (cost_structure-> musical ticket)
+         a) if (cost_structure->time = (12pm - 4pm))
+             i) cost_structure-> musical_ticket = (cost_structure-> num_of_people*70.00)
+         b) else if (cost_structure->time = (6pm - 9pm))
+            i) cost_structure-> musical_ticket = (cost_structure-> num_of_people*150.00)
+
+   else if (cost_structure-> theatre ticket)
+        a) if (cost_structure->time = (12pm - 4pm))
+             i) cost_structure-> theatre_ticket = (cost_structure-> num_of_people*55.00)
+       b) else if (cost_structure->time = (6pm - 9pm))
+            i) cost_structure-> theatre_ticket = (cost_structure-> num_of_people*115.00)
+6. Output updated cost_structure
+7. Stop
+
+
+      *Question Answer for calulate ticket charge*
+      Answer 1) num_of_senior =1, num_of_adults = 2, num_of_children = 1
+      Here, user chooses musical ticket.
+      Therefore, it was further asked to enter the timing (morning or evening)
+      The user chooses the time 8pm (evening)
+      num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+      Therefore, 
+      cost_structure-> musical_ticket = (cost_structure-> num_of_people*150.00)
+      here, musical_ticket = (4 * 150.00) = $600.00
+
+     Answer 2)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+     Here, user chooses musical ticket.
+     Therefore, it was further asked to enter the timing (morning or evening)
+     The user chooses the time 3pm (morning)
+     num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+     Therefore, 
+     cost_structure-> musical_ticket = (cost_structure-> num_of_people*70.00)
+     here, musical_ticket = (4 * 70.00) = $280.00
+
+     Answer 3)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+     Here, user chooses theatre ticket.
+     Therefore, it was further asked to enter the timing (morning or evening)
+     The user chooses the time 8pm (evening)
+     num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+     Therefore, 
+     cost_structure-> theatre_ticket = (cost_structure-> num_of_people*115.00) 
+     here, musical_ticket = (4 * 115.00) = $460.00
+
+    Answer 4)num_of_senior =1, num_of_adults = 2, num_of_children = 1
+    Here, user chooses theatre ticket.
+    Therefore, it was further asked to enter the timing (morning or evening)
+    The user chooses the time 2pm (morning)
+    num_of_people= num_of_children + num_of_adult + num_of_senior = 4 people
+    Therefore, 
+    cost_structure-> theatre_ticket = (cost_structure-> num_of_people*150.00)
+    here, musical_ticket = (4 * 55.00) = $220.00
+
+
+
+//data structures//
+Event_type
+Number_of_people
+noPeople
+discount
+Ticket_Charges
+noItems
+
+//variables//
+nonAlc_bev = $2.50
+alc_bev=$6.75
+candy_item=$2.25
+
+//Part 3 Discount//
+1)start
+2)Receive Number_of_people, Event_type
+3)if noPeople = 1?
+     then: Discount ((100-0/100) * Ticket_charges)
+     
+  else move to next step
+4)if noPeople = 2?
+     then: Discount ((100-5/100) * Ticket_charges)
+     
+  else move to next step
+5)if noPeople = 3?
+     then: Discount ((100-15/100) * Ticket_charges)
+     
+  else move to next step
+6)if noPeople = 4?
+     then: Discount ((100-20/100) * Ticket_charges)
+     
+  else move to next step
+7)if noPeople = 5?
+     then: Discount ((100-30/100) * Ticket_charges)
+     
+  else move to next step
+8)End
+
+
+
+//Part 4 Snacks//
+1) Start 
+3) if Want Non-Alcoholic Beverage?
+      then: Enter the number of items, store the value to noItems
+      then: (noItems * nonAlc_bev) , display Pass
+   else move to next step
+4) if Want Alcoholic Beverage?
+      then: Enter the number of items, store the value to noItems
+      then: (noItems * alc_bev) , display Pass
+   else move to next step
+5) if Want Misc Candy Item?
+      then: Enter the number of items, store the value to noItems
+      then: (noItems * candy_item) , display Pass
+   else move to next step
+6) End
+
+
+
+Part - 5 (Valet Parking Charges)
+
+(A)
+
+//Data Structures
+is_VIP
+night_time
+total_valet_charge
+
+// Process: Calculate Valet Charges (valet_charges)
+1. Pass empty cost_structure to Process.
+2. Determine whether the patron is_VIP.
+3. Store value to cost_structure -> is_VIP.
+	if (is_VIP == 1):
+		cost_structure -> total_valet_charge = 15.00
+			if (night_time == 1):
+				cost_structure -> total_valet_charge *= 2
+	else:
+		cost_structure -> total_valet_charge = 10.00
+			if (night_time == 1):
+				cost_structure -> total_valet_charge *= 2
+
+
+
+(B)
+
+//Data Structures
+is_VIP
+night_time
+total_valet_charge
+tip_amount
+ValetService
+valet_service_1
+
+// Process: Calculate Valet Charges (valet_charges)
+1. Pass  cost_structure to Process.
+2. Determine whether the patron is_VIP.
+3. Store value to cost_structure -> is_VIP.
+	if (is_VIP == 1):
+		cost_structure -> total_valet_charge = 15.00
+			if (night_time == 1):
+				cost_structure -> total_valet_charge *= 2
+	else:
+		cost_structure -> total_valet_charge = 10.00
+			if (night_time == 1):
+				cost_structure -> total_valet_charge *= 2
+
+	total_valet_charge += tip+amount
+
+
+
+Part - 6 (Display Mobile Receipt: Itemized Listing of All Charges)
+
+(A)
+	//Inputs:
+
+	Ticket charge
+	Discount amount (if applicable)
+	Snack charge
+	Valet parking charge
+	Cover charge
+	Calculated values:
+
+	Total charge (ticket charge + snack charge + valet parking charge + cover charge)
+
+	//Process:
+
+	1. Receive the inputs for ticket charge, discount amount (if applicable), snack charge, valet parking charge, and cover charge.
+	2. Calculate the total charge by adding all the charges together: total_charge = ticket_charge + snack_charge + valet_parking_charge + cover_charge.
+	3. Display the individual charges and their amounts:
+		Print "Musical and theatre ticket charge: $" + ticket_charge.
+		If a discount is applied
+			print "Discount rate: " + discount_rate + "%".
+		If a discount is applied
+			print "Discounted amount: $" + discount_amount.
+		Print "Snack charge: $" + snack_charge.
+		Print "Valet parking charge: $" + valet_parking_charge.
+		Print "Cover charge: $" + cover_charge.
+		Print "Total charge: $" + total_charge.
+
+(B)
+	//Inputs:
+
+	cover_charge
+	ticket_charge
+	snack_charge
+	valet_charge
+	discount_applied
+	discount_amount
+
+	//Process:
+	
+	   1. total_charge = ticket_charge + snack_charge + valet_charge + cover_charge
+Print "Ticket charge: $" + ticket_charge
+    		If discount_applied is true:
+        		Print "Discounts Applied"
+       			Print "Discount amount: $" + discount_amount
+    		Print "Snack charge: $" + snack_charge
+   		Print "Valet parking charge: $" + valet_charge
+    		Print "Cover charge: $" + cover_charge
+    		Print "Total charge: $" + total_charge
+
+# Scenario 1
+displayReceipt(4.00, 10.00, 0.00, 0.00, false, 0.00)
+
+# Scenario 2
+displayReceipt(12.00, 10.00, 8.50, 0.00, true, 2.00)
+
+# Scenario 3
+displayReceipt(1.50, 10.00, 0.00, 5.00, false, 0.00)
+
+# Scenario 4
+displayReceipt(16.00, 10.00, 7.50, 12.00, true, 3.50)
+
+
+
+
+
+

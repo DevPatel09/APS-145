@@ -1,0 +1,13 @@
+Pseudo code : Workshop 1
+
+step 1: Start
+step 2: Set up the basketball court and bring the balls.
+step 3: Two players challenged each other for a basketball shootout.
+step 4: Both roll the dice simultaneously for determining who will shoot first.
+step 5: If there is a tie (repeat step 4)
+              If there is no tie (proceed to step 6)          
+step 6: The one with highest number on the dice will go first for the shootout.
+step 7: Then the second player will proceed for the shootouts.
+step 8: End
+   
+

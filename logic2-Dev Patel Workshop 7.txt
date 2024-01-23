@@ -1,0 +1,27 @@
+Name: Dev Kshitij Patel
+Student ID: 142979228
+Email: dkpatel59@myseneca.ca
+
+Workshop 7, group 4, member 2
+
+Step 1.Start
+Step 2.Prompt customer did he/she had taken monthly membership earlier?
+  a)yes (Go to step 6)
+  b)no  
+Step 3.Prompt user to take one of the default Car Wash Options that they want to sign-up for:
+  a)Basic               : $5.50
+  b)Clean              : $8.75
+  c)Super Clean : $12.50
+Step 4:The customer have to pay prepaid membership charges.
+Step 5:Members' windshield will have stick-on barcode chips attached.
+Step 6:Display Welcome message.
+Step 7:Display a message to the member telling them to go to the kiosk station for automatic scanning.
+Step 8:Customer's car will enter near kiosk station.
+Step 9: Scan the barcode chip of the car.
+Step 10: If a barcode chip is successfully detected and read:
+                  then membership contact details will be identified and displayed on the screen.
+             Else, display a message indicating that the vehicle is not a monthly member.
+Step 10: Then display Thankyou message to the customer.
+Step 11: Start Car Wash process
+Step 12: End
+                 
